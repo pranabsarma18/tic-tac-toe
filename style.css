@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #d59a9a;
+    font-family: "Kranky", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.container {
+    height: 100vh;
+    padding-top: 20px;
+    margin: 0 auto;
+    background-color: rgb(102, 195, 206);
+}
+
+.greeting, h1 {
+    text-align: center;
+}
+
+.greeting {
+    margin-bottom: 50px;
+    font-size:larger
+}
+
+
+.container .start {
+    display: block;
+    margin: 50px auto;
+}
+
+.winner {
+    margin-top: 50px;
+    text-align: center;
+    font-size: larger;
+}
+
+.gameboard {
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    display: none; /* will be grid when the game starts so that the ui comes automatically */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    background-color: #333;
+    gap: 2px;                                  
+}
+
+.grid {
+    background-color: #fff;
+}
+
+.gameboard > .grid > button {
+    all: unset; 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    cursor: pointer;
+}
+
+.grid button:disabled{
+    background-color: rgb(208, 204, 198);
+}
+
+.gameboard button:hover {
+    background-color: rgb(213, 222, 230);
+}
+
+.gameboard button img {
+    width: 100%; 
+    height: 100%; 
+}
+
+.winner {
+    font-size: larger;
+}
+
+.restart {
+    all: unset;
+    display: none;
+    padding: 10px;
+    background-color: #db8383;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
+
+}
+
+.restart:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.start {
+    all: unset;
+    padding: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #db8383;
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
+}
+
+.start:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
