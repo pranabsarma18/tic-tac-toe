@@ -1,21 +1,29 @@
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #d59a9a;
-    font-family: "Kranky", sans-serif;
-   font-weight: 400;
-   font-style: normal;
+    background-color: #e2c1c1;
+    font-family: "Story Script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container {
-    height: 100vh;
-    padding-top: 20px;
-    margin: 0 auto;
-    background-color: rgb(102, 195, 206);
+   margin-bottom: 50px;
+   display: flex; 
+   flex-direction: column; 
+   align-items: center; 
 }
 
 .greeting, h1 {
     text-align: center;
+}
+
+h1 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    background-color: #efe4e4;
+    padding: 40px;
 }
 
 .greeting {
@@ -26,7 +34,7 @@ body {
 
 .container .start {
     display: block;
-    margin: 50px auto;
+    margin-top: 50px;
 }
 
 .winner {
@@ -36,13 +44,12 @@ body {
 }
 
 .gameboard {
-    margin: 0 auto;
-    width: 400px;
-    height: 400px;
+    width: min(90vw, 400px);
+    height: min(90vw, 400px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     display: none; /* will be grid when the game starts so that the ui comes automatically */
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     background-color: #333;
     gap: 2px;                                  
 }
@@ -61,6 +68,7 @@ body {
 
 .grid button:disabled{
     background-color: rgb(208, 204, 198);
+    cursor: not-allowed;
 }
 
 .gameboard button:hover {
@@ -72,16 +80,12 @@ body {
     height: 100%; 
 }
 
-.winner {
-    font-size: larger;
-}
-
 .restart {
     all: unset;
     display: none;
+    margin-top: 10px;
     padding: 10px;
     background-color: #db8383;
-    margin: 50px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     font-size: large;
@@ -97,7 +101,8 @@ body {
     all: unset;
     padding: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #db8383;
+    background-color: #6d5b5b;
+    color: #fff;
     border-radius: 5px;
     font-size: large;
     cursor: pointer;

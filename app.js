@@ -1,12 +1,18 @@
-let gameboard = (function gameBoard() {
+let Gameboard = (function gameBoard() {
 
-    gameBoardArray = (() => {
+    const gameBoardArray = (() => {
     const value = 'foo'; // by default
     return [...Array(3)].map(e => Array(3).fill(value));
     })()
+    
+    let placeMark = function(row, column, marker) {
+        
+    }
 
-    return gameBoardArray
+    return {gameBoardArray}
 })()
+
+gameboard = Gameboard.gameBoardArray
 
 displayController = (function displayController() {
     return document.querySelector(".container")
