@@ -1,45 +1,50 @@
 body {
-    height: 100%;
-    margin: 0;
+    height: 100vh;
+    margin: 0 80px;
     padding: 0;
-    background-color: #e2c1c1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: "Story Script", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 .container {
-   margin-bottom: 50px;
-   display: flex; 
-   flex-direction: column; 
-   align-items: center; 
-}
-
-.greeting, h1 {
-    text-align: center;
+   height: 80%;
+   width: 80%;
+   display: grid;
+   place-items: center;
+   grid-template-rows: max-content max-content max-content max-content;
+   background-color: #6d5b5b;
+   padding-bottom: 10px;
+   height: 80%;
 }
 
 h1 {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    height: 10%;
+    text-align: center;
+    background-color: #e9d1d1;
     margin: 0;
-    background-color: #efe4e4;
-    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 0px;
 }
 
 .greeting {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-size:larger
 }
 
 
 .container .start {
-    display: block;
-    margin-top: 50px;
+    /* display: block; */
+    margin-top: 20px;
+    align-self: flex-start;
 }
 
 .winner {
-    margin-top: 50px;
-    text-align: center;
+    /* text-align: center; */
     font-size: larger;
 }
 
@@ -51,7 +56,8 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     background-color: #333;
-    gap: 2px;                                  
+    gap: 4px;     
+    margin-bottom: 10px;           
 }
 
 .grid {
@@ -87,13 +93,14 @@ h1 {
 .restart {
     all: unset;
     display: none;
-    margin-top: 10px;
     padding: 10px;
-    background-color: #db8383;
+    background-color: #a35a5a;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     font-size: large;
     cursor: pointer;
+    width: max-content;
+    height: max-content;
 
 }
 
@@ -105,7 +112,7 @@ h1 {
     all: unset;
     padding: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #6d5b5b;
+    background-color: #a35a5a;
     color: #fff;
     border-radius: 5px;
     font-size: large;
@@ -114,4 +121,14 @@ h1 {
 
 .start:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    height: 10%;
+    width: 80%;
+    font-size:small;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9d1d1;
 }

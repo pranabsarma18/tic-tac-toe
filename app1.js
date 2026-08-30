@@ -14,7 +14,7 @@ startBtn.addEventListener("click", () => {
     player2 = createPlayer(prompt("Player 2"), "O")
 
     Game.start();
-
+    DisplayController.displayGreeting()
     const gameBoard = document.querySelector(".gameboard")
     gameBoard.style.display = "grid";
     DisplayController.hideStartButton()
@@ -79,6 +79,7 @@ const Game = (() => {
 
     function restart() {
         Gameboard.reset();
+        DisplayController.displayGreeting()
         start();
     }
 
@@ -160,6 +161,7 @@ const DisplayController = (() => {
     const gridBtns = document.querySelectorAll(".gameboard button");
     const winnerPara = document.querySelector(".winner");
     const restartBtn = document.querySelector(".restart");
+    const greeting = document.querySelector(".greeting")
 
     function renderBoard() {
         
@@ -232,13 +234,24 @@ const DisplayController = (() => {
     function displayResult(result) {
         if (result === "X") {
             winnerPara.textContent = `${player1.name} is the Winner 🎉🥳`;
+            hideGreeting();
         }
         else if (result === "O") {
             winnerPara.textContent = `${player2.name} is the Winner 🎉🥳`;
+            hideGreeting();
         }
         else if (result === "draw") {
             winnerPara.textContent = `It's a tie! 🤝`;
+            hideGreeting();
         }
+    }
+
+    function displayGreeting() {
+        greeting.textContent = `Game is on between ${player1.name} vs ${player2.name}`
+    }
+
+     function hideGreeting() {
+        greeting.textContent = ""
     }
 
     function disableBoard() {
@@ -276,7 +289,8 @@ const DisplayController = (() => {
         addRestartListener,
         enableBoard,
         showRestartButton,
-        hideStartButton
+        hideStartButton,
+        displayGreeting
     };
 })();
 
