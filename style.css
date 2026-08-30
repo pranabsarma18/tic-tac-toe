@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    margin: 0 80px;
+    margin: 0 120px;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -15,6 +15,7 @@ body {
    width: 80%;
    display: grid;
    place-items: center;
+   gap: 10px;
    grid-template-rows: max-content max-content max-content max-content;
    background-color: #6d5b5b;
    padding-bottom: 10px;
@@ -27,12 +28,12 @@ h1 {
     text-align: center;
     background-color: #e9d1d1;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 0px;
 }
 
 .greeting {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     font-size:larger
 }
 
@@ -93,8 +94,9 @@ h1 {
 .restart {
     all: unset;
     display: none;
-    padding: 10px;
+    padding: 12px 14px;
     background-color: #a35a5a;
+    border: 1px solid black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     font-size: large;
@@ -106,6 +108,7 @@ h1 {
 
 .restart:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: #c13a60;
 }
 
 .start {
@@ -113,6 +116,7 @@ h1 {
     padding: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #a35a5a;
+    border: 1px solid black;
     color: #fff;
     border-radius: 5px;
     font-size: large;
@@ -121,6 +125,7 @@ h1 {
 
 .start:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: #c13a60;
 }
 
 footer {
